@@ -5,6 +5,9 @@ from modal import App, Image
 
 app = modal.App("pricer-service")
 image = Image.debian_slim().pip_install("torch", "transformers", "bitsandbytes", "accelerate", "peft")
+
+# This collects the secret from Modal.
+# Depending on your Modal configuration, you may need to replace "hf-secret" with "huggingface-secret"
 secrets = [modal.Secret.from_name("hf-secret")]
 
 # Constants
@@ -19,7 +22,7 @@ REVISION = "e8d637df551603dc86cd7a1598a8f44af4d7ae36"
 FINETUNED_MODEL = f"{HF_USER}/{PROJECT_RUN_NAME}"
 
 
-@app.function(image=image, secrets=secrets, gpu=GPU)
+@app.function(image=image, secrets=secrets, gpu=GPU, timeout=1800)
 def price(description: str) -> float:
     import os
     import re

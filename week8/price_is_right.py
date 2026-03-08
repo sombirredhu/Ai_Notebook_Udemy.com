@@ -15,6 +15,7 @@ class App:
         
             def start():
                 self.agent_framework = DealAgentFramework()
+                self.agent_framework.init_agents_as_needed()
                 opportunities = self.agent_framework.memory
                 table = table_for(opportunities)
                 return table
@@ -44,7 +45,7 @@ class App:
                     column_widths=[4, 1, 1, 1, 2],
                     row_count=10,
                     col_count=5,
-                    height=400,
+                    max_height=400,
                 )
         
             ui.load(start, inputs=[], outputs=[opportunities_dataframe])
