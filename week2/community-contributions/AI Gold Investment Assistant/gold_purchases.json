@@ -42,5 +42,16 @@
     "transaction_id": "GOLD_20250618_122028",
     "price_source": "Unknown",
     "market_advice": "Given the high-risk level and the current premium pricing of gold at 170892.8 EGP, I advise you to hold off on large purchases until there is a market correction or a dip in prices. Monitor economic indicators and currency fluctuations in Egypt closely, as the EGP's stability can significantly affect gold prices; consider making smaller strategic purchases during any pullbacks to mitigate risk. Additionally, keep an eye on geopolitical developments that could impact market sentiment and gold demand, and be prepared to act promptly when favorable conditions arise."
+  },
+  {
+    "purchase_date": "2026-03-08T18:41:54.546359",
+    "ounces": 2.5,
+    "price_per_ounce": 2350.5,
+    "total_cost": 5876.25,
+    "currency": "USD",
+    "country": "USA",
+    "transaction_id": "GOLD_20260308_184154",
+    "price_source": "Unknown",
+    "market_advice": "Fair pricing at 2350.5 USD. Market is fairly valued. Consider smaller purchases or wait for pullbacks."
   }
 ]
